@@ -1,6 +1,6 @@
 # Phoenix Banners
 
-Implementierungen diverser Banner. Styles kommen aus dem Design System.
+TS/JS-Implementierungen diverser Banner. Styles kommen aus dem Design System.
 
 - Social Media Share Banner
 
