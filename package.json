@@ -1,0 +1,40 @@
+{
+  "name": "@phoenixreisen/dropdown",
+  "version": "0.0.1",
+  "description": "Mithril Sharebanner",
+  "homepage": "https://design-system.phoenixreisen.net",
+  "main": "dist/sharebanner.m.js",
+  "types": "dist/sharebanner.m.d.ts",
+  "module": "src/sharebanner.m.tsx",
+  "scripts": {
+    "prepublish": "npm test",
+    "test": "ospec --preload ./test-setup.js",
+    "compile:ts": "npx tsc --build tsconfig.json",
+    "compile:scss": "npx sass --no-source-map ./src:./dist",
+    "pretest": "del-cli ./dist && npm run compile:ts && npm run compile:scss"
+  },
+  "author": "Phoenix Reisen <it@phoenixreisen.com>",
+  "contributors": [
+    "Fabian Marcus <f.marcus@phoenixreisen.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenixreisen/dropdown.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@phoenixreisen/notification": "^1.0.5",
+    "clipboard": "^2.0.6",
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/mithril": "^2.0.3",
+    "del-cli": "^3.0.1",
+    "jsdom": "^16.3.0",
+    "mithril-node-render": "^3.0.0",
+    "mithril-query": "^3.1.0",
+    "ospec": "^4.1.1",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.6"
+  }
+}
