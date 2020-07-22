@@ -10,7 +10,7 @@ interface Attrs {
 
 //--- Component
 
-export const Newsletterbanner: m.Component<Attrs> = {
+export const Linkbanner: m.Component<Attrs> = {
 
     oninit({attrs}: m.Vnode<Attrs>) {
         if(!attrs.url || !attrs.urltext) {
@@ -20,8 +20,8 @@ export const Newsletterbanner: m.Component<Attrs> = {
 
     view({attrs}: m.Vnode<Attrs>) {
         return(
-            <article class="newsletter-banner mv5">
-                <div class="newsletter-banner__textbox">
+            <article class="link-banner mv5">
+                <div class="link-banner__textbox">
                     {attrs.text &&
                         <p>{attrs.text}</p>
                     }
@@ -36,4 +36,4 @@ export const Newsletterbanner: m.Component<Attrs> = {
     }
 } as any;
 
-export default Newsletterbanner as any;
+export default Linkbanner as any;

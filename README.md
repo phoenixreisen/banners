@@ -2,6 +2,7 @@
 
 TS/JS-Implementierungen diverser Banner. Styles kommen aus dem Design System.
 
+- Link Banner
 - Social Media Share Banner
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
@@ -18,12 +19,12 @@ npm install --save @phoenixreisen/banners
 
 ```js
 // entweder CommonJS
+const Linkbanner = require('@phoenixreisen/banners/link.m');
 const Sharebanner = require('@phoenixreisen/banners/share.m');
-const Nlbanner = require('@phoenixreisen/banners/newsletter.m');
 
 // oder ES6+
+import Linkbanner from '@phoenixreisen/banners/link.m';
 import Sharebanner from '@phoenixreisen/banners/share.m';
-import Nlbanner from '@phoenixreisen/banners/newsletter.m';
 
 // Import alle vorhandenen Banner
 // (nicht zu empfehlen, wenn mehrere Banner vorhanden, aber nicht alle benutzt werden)
@@ -58,18 +59,18 @@ m(Sharebanner, {
 />
 ```
 
-##### Newsletterbanner [Vorschau](http://localhost:3027/section-200.html)
+##### Linkbanner [Vorschau](http://localhost:3027/section-200.html)
 
 ```js
 // Hyperscript
-m(Newsletterbanner, {
+m(Linkbanner, {
     text: "Immer über die besten Reisen auf dem Laufenden bleiben!",
     url: "https://www.phoenixreisen.com",
     urltext: "Jetzt abonnieren",
 });
 
 // TSX
-<Newsletterbanner
+<Linkbanner
     text="Immer über die besten Reisen auf dem Laufenden bleiben!"
     url="https://www.phoenixreisen.com"
     urltext="Jetzt abonnieren"
