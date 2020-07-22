@@ -30,7 +30,10 @@ import * as Banners from '@phoenixreisen/banners';
 
 #### Aufruf
 
+##### Sharebanner [Vorschau](http://localhost:3027/section-200.html)
+
 ```js
+// Hyperscript
 m(Sharebanner, {
     noBackground: true,
     headline: 'Hallo, I bims, der Share Banner.',
@@ -50,6 +53,24 @@ m(Sharebanner, {
     url="https://phoenixreisen.com"
     hashtags="phx, reisen, kreuzfahrt"
     appname="Phoenix Kabinenpräsente"
+/>
+```
+
+##### Newsletterbanner [Vorschau](http://localhost:3027/section-200.html)
+
+```js
+// Hyperscript
+m(Newsletterbanner, {
+    text: "Immer über die besten Reisen auf dem Laufenden bleiben!",
+    url: "https://www.phoenixreisen.com",
+    urltext: "Jetzt abonnieren",
+});
+
+// TSX
+<Newsletterbanner
+    text="Immer über die besten Reisen auf dem Laufenden bleiben!"
+    url="https://www.phoenixreisen.com"
+    urltext="Jetzt abonnieren"
 />
 ```
 
