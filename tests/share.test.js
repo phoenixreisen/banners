@@ -7,7 +7,7 @@ Object.assign(global, m, {
 });
 
 test.spec('Sharebanner', () => {
-    const BannerView = require('../dist/sharebanner.m.js').default;
+    const BannerView = require('../dist/share.m.js').default;
 
     test('#1 - should initialize correctly', () => {
         const Banner = mq(m(BannerView));

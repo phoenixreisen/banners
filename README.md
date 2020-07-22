@@ -18,10 +18,12 @@ npm install --save @phoenixreisen/banners
 
 ```js
 // entweder CommonJS
-const Sharebanner = require('@phoenixreisen/banners/sharebanner.m');
+const Sharebanner = require('@phoenixreisen/banners/share.m');
+const Nlbanner = require('@phoenixreisen/banners/newsletter.m');
 
 // oder ES6+
-import Sharebanner from '@phoenixreisen/banners/sharebanner.m';
+import Sharebanner from '@phoenixreisen/banners/share.m';
+import Nlbanner from '@phoenixreisen/banners/newsletter.m';
 
 // Import alle vorhandenen Banner
 // (nicht zu empfehlen, wenn mehrere Banner vorhanden, aber nicht alle benutzt werden)
