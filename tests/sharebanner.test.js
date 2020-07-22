@@ -6,14 +6,6 @@ Object.assign(global, m, {
     location: {href: ''}
 });
 
-const mock = (success, timeout) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            success ? resolve() : reject({message: 'error'})
-        }, timeout);
-    });
-}
-
 test.spec('Sharebanner', () => {
     const BannerView = require('../dist/sharebanner.m.js').default;
 

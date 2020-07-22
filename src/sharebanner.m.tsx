@@ -82,6 +82,6 @@ export const Sharebanner: m.Component<AttrTypes> = {
             </article>
         );
     }
-};
+} as any;
 
 export default Sharebanner as any;
