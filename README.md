@@ -64,16 +64,16 @@ m(Sharebanner, {
 ```js
 // Hyperscript
 m(Linkbanner, {
-    text: "Immer über die besten Reisen auf dem Laufenden bleiben!",
-    url: "https://www.phoenixreisen.com",
-    urltext: "Jetzt abonnieren",
+    text: "Immer über die besten Reisen auf dem Laufenden bleiben!",    //optional
+    url: "https://www.phoenixreisen.com",                               //pflicht
+    urltext: "Jetzt abonnieren",                                        //pflicht
 });
 
 // TSX
 <Linkbanner
-    text="Immer über die besten Reisen auf dem Laufenden bleiben!"
-    url="https://www.phoenixreisen.com"
-    urltext="Jetzt abonnieren"
+    text="Immer über die besten Reisen auf dem Laufenden bleiben!"      //optional
+    url="https://www.phoenixreisen.com"                                 //pflicht
+    urltext="Jetzt abonnieren"                                          //pflicht
 />
 ```
 
