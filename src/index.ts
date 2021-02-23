@@ -1,3 +1,5 @@
+/** @jsx m */
+
 /**
  * Banner with Buttons to share Url via several Social Media Platforms
  **/

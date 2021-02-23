@@ -1,10 +1,12 @@
+/** @jsx m */
+
 import {notes} from '@phoenixreisen/notification';
 import ClipboardJS from 'clipboard';
 import m from 'mithril';
 
 //--- Types ------
 
-interface AttrTypes {
+interface Attrs {
     url: string,
     appname: string,
     urltext: string,
@@ -14,13 +16,13 @@ interface AttrTypes {
     noBackground: boolean,
 }
 
-interface StateTypes {
+interface State {
     showClipboardMsg: boolean,
 }
 
-//--- Funktionen -----
+//--- Functions -----
 
-const saveToClipboard = (state: StateTypes) => {
+const saveToClipboard = (state: State) => {
     notes.add({text: 'In die Zwischenablage kopiert.'});
     state.showClipboardMsg = true;
     setTimeout(() => {
@@ -31,9 +33,9 @@ const saveToClipboard = (state: StateTypes) => {
 
 //--- Component -----
 
-export const Sharebanner: m.Component<AttrTypes> = {
+export const Sharebanner: m.Component<Attrs> = {
 
-    oninit({state}: m.Vnode<AttrTypes, StateTypes>) {
+    oninit({state}: m.Vnode<Attrs, State>) {
         state.showClipboardMsg = false;
     },
 
@@ -41,7 +43,7 @@ export const Sharebanner: m.Component<AttrTypes> = {
         new ClipboardJS('.share-clipboard');
     },
 
-    view({state, attrs}: m.Vnode<AttrTypes, StateTypes>) {
+    view({state, attrs}: m.Vnode<Attrs, State>) {
         const {noBackground} = attrs;
         const {showClipboardMsg} = state;
         const {headline, appname, urltext, mailsubject, hashtags} = attrs;

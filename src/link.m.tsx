@@ -1,3 +1,5 @@
+/** @jsx m */
+
 import m from 'mithril';
 
 //--- Types -----
@@ -8,7 +10,7 @@ interface Attrs {
     urltext: string,
 }
 
-//--- Component
+//--- Component -----
 
 export const Linkbanner: m.Component<Attrs> = {
 
