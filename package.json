@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/banners",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "JS-Implementierung diverser Banner",
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/sharebanner.m.js",
