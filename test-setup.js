@@ -1,17 +1,18 @@
-const test = require('ospec');
-const jsdom = require('jsdom');
+import jsdom from 'jsdom';
+import ospec from 'ospec';
 
 const dom = new jsdom.JSDOM('', {
     // für `requestAnimationFrame`
     pretendToBeVisual: true,
 });
 
-global.window = dom.window;
-global.document = dom.window.document;
-global.requestAnimationFrame = dom.window.requestAnimationFrame;
+Object.assign(global, {
+    window: dom.window,
+    document: dom.window.document,
+    HTMLElement: dom.window.HTMLElement,
+    requestAnimationFrame: dom.window.requestAnimationFrame,
+});
 
-require('mithril');
-
-test.after(function() {
+ospec.after(function() {
     dom.window.close();
 });

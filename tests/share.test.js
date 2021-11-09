@@ -1,16 +1,15 @@
-const m = require('mithril');
-const mq = require("mithril-query");
-const test = require("ospec");
+import Sharebanner from "../dist/share.m.js";
+import mq from "mithril-query";
+import test from "ospec";
 
-Object.assign(global, m, {
-    location: {href: ''}
+Object.assign(global, {
+    location: { href: '' }
 });
 
 test.spec('Sharebanner', () => {
-    const BannerView = require('../dist/share.m.js').default;
 
     test('#1 - should initialize correctly', () => {
-        const Banner = mq(m(BannerView));
+        const Banner = mq(Sharebanner);
         test(Banner.should.have('.share-banner')).equals(true);
         test(Banner.should.contain('Gerne weitersagen...')).equals(true);
         test(Banner.should.not.have('.share-banner--bg-less')).equals(true);
@@ -21,7 +20,7 @@ test.spec('Sharebanner', () => {
     });
 
     test('#2 - should be backgroundless when `noBackground` is `true`', () => {
-        const Banner = mq(m(BannerView, {noBackground: true}));
+        const Banner = mq(Sharebanner, { noBackground: true });
         test(Banner.should.have('.share-banner--bg-less')).equals(true);
     });
 
@@ -33,10 +32,9 @@ test.spec('Sharebanner', () => {
         const hashtags = 'blabla, blubu';
         const appname = 'Share App';
 
-        const Banner = mq(m(BannerView, {
-            headline, mailsubject, hashtags,
-            urltext, url, appname,
-        }));
+        const Banner = mq(Sharebanner, {
+            headline, mailsubject, hashtags, urltext, url, appname,
+        });
         test(Banner.should.contain(headline)).equals(true);
         test(Banner.should.have(`a[title="${appname} twittern"]`)).equals(true);
         test(Banner.should.have(`a[title="${appname} per Email empfehlen"]`)).equals(true);
@@ -49,7 +47,7 @@ test.spec('Sharebanner', () => {
     });
 
     test('#4 - should toggle clipboard icon on click', async () => {
-        const Banner = mq(m(BannerView, {}));
+        const Banner = mq(Sharebanner);
         test(Banner.should.have('.share-clipboard')).equals(true);
         Banner.click('.share-clipboard');
         test(Banner.should.have('.fa-clipboard-check')).equals(true);

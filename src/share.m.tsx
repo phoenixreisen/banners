@@ -1,5 +1,3 @@
-/** @jsx m */
-
 import {notes} from '@phoenixreisen/notification';
 import ClipboardJS from 'clipboard';
 import m from 'mithril';

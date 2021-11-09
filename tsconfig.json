@@ -1,11 +1,15 @@
 {
 	"compilerOptions": {
-		"outDir": "./dist/",
 		"target": "ES5",
+		"outDir": "./dist/",
 
+		"lib": [
+			"dom",
+			"ESNext"
+		],
 		"jsx": "react",
 		"jsxFactory": "m",
-		"module": "CommonJS",
+		"module": "ESNext",
 		"moduleResolution": "Node",
 
 		"sourceMap": false,
